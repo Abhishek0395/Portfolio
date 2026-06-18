@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhishek Agarwala — NLP &amp; ML Engineer</title>
+<meta name="description" content="Abhishek Agarwala — NLP Research Engineer and Software Engineer specializing in LLMs, Bengali NLP, and applied machine learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0e14;--bg2:#0f141d;--panel:#131a25;--line:#1f2a38;
+    --ink:#e6edf3;--ink-soft:#8b9bb0;--ink-dim:#5b6b80;
+    --cyan:#22d3ee;--green:#34e0a1;--violet:#a78bfa;--amber:#fbbf24;
+    --glow:0 0 0 1px rgba(34,211,238,.15),0 18px 50px -18px rgba(34,211,238,.25);
+    --nav-bg:rgba(10,14,20,.72);
+    --body-glow:radial-gradient(50% 40% at 85% -5%,rgba(34,211,238,.10),transparent 60%),radial-gradient(45% 40% at 0% 30%,rgba(167,139,250,.08),transparent 60%);
+    --max:1080px;
+  }
+  :root[data-theme="light"]{
+    --bg:#f5f8fc;--bg2:#ffffff;--panel:#ffffff;--line:#e3eaf3;
+    --ink:#0e1726;--ink-soft:#52617a;--ink-dim:#8493a8;
+    --cyan:#0891b2;--green:#059669;--violet:#7c3aed;--amber:#d97706;
+    --glow:0 1px 0 rgba(15,23,38,.04),0 18px 44px -22px rgba(8,145,178,.28);
+    --nav-bg:rgba(245,248,252,.8);
+    --body-glow:radial-gradient(50% 40% at 85% -5%,rgba(8,145,178,.10),transparent 60%),radial-gradient(45% 40% at 0% 30%,rgba(124,58,237,.07),transparent 60%);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;
+    background-image:var(--body-glow);transition:background-color .3s ease,color .3s ease}
+  nav,.term,.term-bar,.term-body,.job,.csc,.proj,.sk,.aw,.contact,.chip,.tk,.theme-btn,.sec-head h2,footer{transition:background-color .3s ease,border-color .3s ease,color .3s ease}
+  .mono{font-family:'JetBrains Mono',monospace}
+  a{color:var(--cyan);text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  ::selection{background:rgba(34,211,238,.3)}
+  h1,h2,h3{line-height:1.12;letter-spacing:-.02em}
+
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:var(--nav-bg);border-bottom:1px solid var(--line)}
+  .navright{display:flex;align-items:center;gap:22px}
+  .theme-btn{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.8rem;font-weight:600;color:var(--ink-soft);background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:7px 12px;cursor:pointer}
+  .theme-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+  .theme-btn .ico{font-size:.95rem;line-height:1}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:.98rem}
+  .brand .p{color:var(--green)}.brand .b{color:var(--cyan)}
+  .navlinks{display:flex;gap:28px}
+  .navlinks a{color:var(--ink-soft);font-size:.9rem;font-family:'JetBrains Mono',monospace;transition:color .2s}
+  .navlinks a:hover{color:var(--cyan)}
+  .navlinks a::before{content:"// ";color:var(--ink-dim)}
+  @media(max-width:760px){.navlinks{display:none}}
+
+  header{padding:90px 0 64px;position:relative}
+  .term{background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--glow);overflow:hidden;max-width:640px;margin-bottom:40px}
+  .term-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--bg)}
+  .term-bar .d{width:12px;height:12px;border-radius:50%}
+  .term-bar .d:nth-child(1){background:#ff5f57}.term-bar .d:nth-child(2){background:#febc2e}.term-bar .d:nth-child(3){background:#28c840}
+  .term-bar .t{margin-left:10px;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--ink-dim)}
+  .term-body{padding:20px 22px;font-family:'JetBrains Mono',monospace;font-size:.9rem;line-height:1.9}
+  .term-body .c{color:var(--ink-dim)}.term-body .k{color:var(--violet)}.term-body .s{color:var(--green)}.term-body .v{color:var(--cyan)}
+  .cursor{display:inline-block;width:9px;height:1.1em;background:var(--green);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+  h1.name{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800;margin-bottom:14px}
+  h1.name span{background:linear-gradient(90deg,var(--cyan),var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tag{font-size:1.15rem;color:var(--ink-soft);max-width:36em;margin-bottom:30px}
+  .tag b{color:var(--ink)}
+  .cta{display:flex;gap:13px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:10px;font-weight:600;font-size:.9rem;font-family:'JetBrains Mono',monospace;transition:transform .2s,box-shadow .2s,border-color .2s}
+  .btn-p{background:linear-gradient(90deg,var(--cyan),var(--green));color:#04121a}
+  .btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(34,211,238,.5)}
+  .btn-g{border:1px solid var(--line);color:var(--ink)}
+  .btn-g:hover{border-color:var(--cyan);color:var(--cyan)}
+
+  section{padding:72px 0}
+  .sec-head{margin-bottom:40px}
+  .sec-head .k{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--green);margin-bottom:10px}
+  .sec-head h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:700}
+  .sec-head .k::before{content:"$ ";color:var(--ink-dim)}
+
+  /* coding stats */
+  .codestats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .csc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px;position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
+  .csc:hover{transform:translateY(-4px);border-color:var(--cyan)}
+  .csc .plat{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px;margin-bottom:14px}
+  .csc .plat .pp{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
+  .csc .big{font-family:'JetBrains Mono',monospace;font-size:2.6rem;font-weight:700;color:var(--cyan)}
+  .csc .sub{font-size:.85rem;color:var(--ink-dim);margin-top:2px}
+  .csc .handle{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--violet);margin-top:10px}
+  @media(max-width:760px){.codestats{grid-template-columns:1fr}}
+
+  /* experience */
+  .xp{display:grid;gap:18px}
+  .job{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px 26px;transition:border-color .2s}
+  .job:hover{border-color:var(--green)}
+  .job .top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+  .job h3{font-size:1.22rem;font-weight:700}
+  .job .co{color:var(--green);font-weight:600;font-size:.96rem}
+  .job .when{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--ink-dim);white-space:nowrap}
+  .job ul{list-style:none;margin-top:12px;display:grid;gap:6px}
+  .job li{padding-left:20px;position:relative;color:var(--ink-soft);font-size:.94rem}
+  .job li::before{content:"▹";position:absolute;left:0;color:var(--cyan)}
+  .job .sup{font-size:.84rem;color:var(--ink-dim);margin-top:10px;font-style:italic}
+
+  /* projects */
+  .projgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .proj{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px;transition:transform .2s,border-color .2s}
+  .proj:hover{transform:translateY(-4px);border-color:var(--violet)}
+  .proj .yr{font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--amber);float:right}
+  .proj h4{font-size:1.1rem;font-weight:700;margin-bottom:8px}
+  .proj p{color:var(--ink-soft);font-size:.92rem;margin-bottom:14px}
+  .stack{display:flex;flex-wrap:wrap;gap:7px}
+  .tk{font-family:'JetBrains Mono',monospace;font-size:.74rem;padding:4px 10px;border-radius:6px;background:rgba(34,211,238,.08);border:1px solid var(--line);color:var(--cyan)}
+  @media(max-width:760px){.projgrid{grid-template-columns:1fr}}
+
+  /* pubs */
+  .pub{border-left:2px solid var(--line);padding:4px 0 22px 22px;position:relative}
+  .pub::before{content:"";position:absolute;left:-5px;top:8px;width:8px;height:8px;border-radius:50%;background:var(--green)}
+  .pub:last-child{padding-bottom:0}
+  .pub .pt{font-weight:600;font-size:1.02rem;margin-bottom:5px}
+  .pub .pa{font-size:.86rem;color:var(--ink-soft)}
+  .pub .pa em{color:var(--ink);font-style:normal;border-bottom:1px solid var(--green)}
+  .pub .pv{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--amber);margin-top:6px}
+
+  /* skills */
+  .skillgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .sk{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .sk h4{font-family:'JetBrains Mono',monospace;font-size:.88rem;color:var(--green);margin-bottom:14px}
+  .sk h4::before{content:"# ";color:var(--ink-dim)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-size:.82rem;padding:6px 12px;border-radius:8px;background:var(--bg2);border:1px solid var(--line);color:var(--ink-soft)}
+  @media(max-width:760px){.skillgrid{grid-template-columns:1fr}}
+
+  .awards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .aw{display:flex;gap:14px;padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+  .aw .ico{font-size:1.4rem}
+  .aw b{display:block;font-size:.96rem}
+  .aw span{font-size:.85rem;color:var(--ink-soft)}
+  @media(max-width:760px){.awards{grid-template-columns:1fr}}
+
+  .contact{text-align:center;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:54px 28px;box-shadow:var(--glow)}
+  .contact h2{font-size:2.2rem;font-weight:700;margin-bottom:12px}
+  .contact h2 span{color:var(--green)}
+  .contact p{color:var(--ink-soft);max-width:32em;margin:0 auto 26px}
+  .contact .cta{justify-content:center}
+  footer{padding:36px 0;text-align:center;color:var(--ink-dim);font-size:.82rem;font-family:'JetBrains Mono',monospace;border-top:1px solid var(--line)}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+  .reveal.in{opacity:1;transform:none}
+</style>
+<script>
+  (function(){
+    var t=localStorage.getItem('ab-theme');
+    if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark';}
+    if(t==='light')document.documentElement.setAttribute('data-theme','light');
+  })();
+</script>
+</head>
+<body>
+<nav><div class="wrap">
+  <div class="brand"><span class="p">~/</span><span class="b">abhishek</span></div>
+  <div class="navright">
+    <div class="navlinks">
+      <a href="#experience">experience</a><a href="#projects">projects</a>
+      <a href="#research">research</a><a href="#skills">skills</a><a href="#contact">contact</a>
+    </div>
+    <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle light or dark theme">
+      <span class="ico" id="themeIco">☀</span><span id="themeLbl">light</span>
+    </button>
+  </div>
+</div></nav>
+
+<header><div class="wrap reveal">
+  <div class="term">
+    <div class="term-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="t">abhishek@aims-lab: ~</span></div>
+    <div class="term-body">
+      <div><span class="c"># whoami</span></div>
+      <div><span class="k">role</span> = <span class="s">"NLP Research Engineer"</span></div>
+      <div><span class="k">focus</span> = [<span class="s">"LLMs"</span>, <span class="s">"Bengali NLP"</span>, <span class="s">"Applied ML"</span>]</div>
+      <div><span class="k">status</span> = <span class="s">"building conversational AI for good"</span> <span class="cursor"></span></div>
+    </div>
+  </div>
+  <h1 class="name">Abhishek <span>Agarwala</span></h1>
+  <p class="tag"><b>NLP Research Engineer &amp; Software Engineer.</b> I build language models and AI systems — from Bengali hate-speech detection and code generation to conversational agents for adolescent health. BUET CSE graduate, ex-Samsung R&amp;D.</p>
+  <div class="cta">
+    <a class="btn btn-p" href="#contact">Contact me →</a>
+    <a class="btn btn-g" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn btn-g" href="https://scholar.google.com/" target="_blank" rel="noopener">Scholar</a>
+    <a class="btn btn-g" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</div></header>
+
+<section id="stats"><div class="wrap reveal">
+  <div class="sec-head"><div class="k">competitive_programming --stats</div><h2>2,000+ problems solved</h2></div>
+  <div class="codestats">
+    <div class="csc"><div class="plat"><span class="pp"></span>Codeforces</div><div class="big">810</div><div class="sub">problems solved</div><div class="handle">@strglntoexist</div></div>
+    <div class="csc"><div class="plat"><span class="pp"></span>GeeksforGeeks</div><div class="big">635</div><div class="sub">problems solved</div><div class="handle">@strglntoexist</div></div>
+    <div class="csc"><div class="plat"><span class="pp"></span>LeetCode</div><div class="big">575</div><div class="sub">problems solved</div><div class="handle">@strglntoexist</div></div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap reveal">
+  <div class="sec-head"><div class="k">cat experience.log</div><h2>Work experience</h2></div>
+  <div class="xp">
+    <div class="job">
+      <div class="top"><div><h3>NLP Research Engineer</h3><div class="co">AIMS Lab, United International University</div></div><div class="when">07/2023 – Present</div></div>
+      <ul>
+        <li>Building an adolescent-focused conversational agent in Bengali</li>
+        <li>Integrating with Susastho.ai for SRH and mental-health information</li>
+      </ul>
+      <div class="sup">Supervisor: Dr. Khondaker Abdullah Al Mamun</div>
+    </div>
+    <div class="job">
+      <div class="top"><div><h3>Software Engineer</h3><div class="co">Samsung R&amp;D Institute, Bangladesh (SRBD)</div></div><div class="when">02/2020 – 05/2021</div></div>
+      <ul>
+        <li>Developed and maintained software solutions to design &amp; UX specs</li>
+        <li>Fixed bugs, added features, reviewed code, collaborated with global teams</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="top"><div><h3>Junior Software Engineer</h3><div class="co">REVE Systems</div></div><div class="when">07/2019 – 11/2019</div></div>
+      <ul>
+        <li>Built iOS applications using Objective-C and Swift in Xcode</li>
+        <li>Implemented new features and modified existing code to requirements</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap reveal">
+  <div class="sec-head"><div class="k">ls ./projects</div><h2>Selected projects</h2></div>
+  <div class="projgrid">
+    <div class="proj"><span class="yr">2024</span><h4>Susastho.AI Chatbot</h4><p>Conversational AI chatbot raising adolescent sexual, reproductive &amp; mental-health awareness.</p><div class="stack"><span class="tk">Flask</span><span class="tk">PyTorch</span><span class="tk">LangChain</span></div></div>
+    <div class="proj"><span class="yr">2025</span><h4>Intent-Based Search Engine</h4><p>Semantic product search engine using FAISS for intent-based retrieval, with safety filtering.</p><div class="stack"><span class="tk">PyTorch</span><span class="tk">LangGraph</span><span class="tk">FAISS</span><span class="tk">Redis</span><span class="tk">Detoxify</span><span class="tk">Docker</span></div></div>
+    <div class="proj"><span class="yr">2025</span><h4>BLP-25 Task 1 · Hate Speech</h4><p>Multi-label Bengali hate-speech classifier competing across three subtasks.</p><div class="stack"><span class="tk">PyTorch</span><span class="tk">Transformers</span><span class="tk">Scikit-learn</span></div></div>
+    <div class="proj"><span class="yr">2025</span><h4>BLP-25 Task 2 · BanglaCode</h4><p>Python code generation from Bengali instructions — cross-lingual code-gen benchmark.</p><div class="stack"><span class="tk">PyTorch</span><span class="tk">Unsloth</span><span class="tk">OpenAI SDK</span></div></div>
+  </div>
+</div></section>
+
+<section id="research"><div class="wrap reveal">
+  <div class="sec-head"><div class="k">git log --publications</div><h2>Publications &amp; research</h2></div>
+  <div style="display:grid;gap:0">
+    <div class="pub"><div class="pt">Code_Gen at BLP-2025 Task 1: Enhancing Bangla Hate Speech Detection with Transformers via Token-Aware Adversarial Contrastive Training and Layer-wise LR Decay</div><div class="pa">Shifat Islam, <em>Abhishek Agarwala</em>, Emon Ghosh</div><div class="pv">AACL-IJCNLP 2025 · Workshop on BLP</div></div>
+    <div class="pub"><div class="pt">Code_Gen at BLP-2025 Task 2: BanglaCode — A Cross-lingual Benchmark for Code Generation with Translation and Assertion Strategies</div><div class="pa"><em>Abhishek Agarwala</em>, Shifat Islam, Emon Ghosh</div><div class="pv">AACL-IJCNLP 2025 · Workshop on BLP</div></div>
+    <div class="pub"><div class="pt">Artificial intelligence-based risk assessment tools for sexual, reproductive and mental health: a systematic review</div><div class="pa">S. Islam, R. Shahriyar, <em>Abhishek Agarwala</em>, et al.</div><div class="pv">BMC Medical Informatics and Decision Making, vol. 25, art. 132 · 2025</div></div>
+    <div class="pub"><div class="pt">SuSastho.AI: A Multimodal Medical Copilot for Adolescents Using Evidence-Based Medicine and Large Language Models</div><div class="pa">S. Ahamed, M. H. Chowdhury, M. Zaman, <em>Abhishek Agarwala</em>, et al.</div><div class="pv">SSRN Electronic Journal · 2025 (preprint)</div></div>
+    <div class="pub"><div class="pt">Unpacking COVID-19 Vaccine Attitudes: Hesitancy and Acceptance Among Undergraduate Students in Bangladesh</div><div class="pa">A. Bhadra, V. Podder, … <em>Abhishek Agarwala</em>, N. S. Kakoly</div><div class="pv">Cureus, vol. 15, no. 11 · 2023</div></div>
+    <div class="pub"><div class="pt">Local Penta Pattern for Texture Image Retrieval <span style="color:var(--ink-dim);font-weight:400">(Undergraduate Thesis)</span></div><div class="pa"><em>Abhishek Agarwala</em>, Md. Mahim Anjum Haque, Dr. Md. Monirul Islam</div><div class="pv">BUET · 2019</div></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap reveal">
+  <div class="sec-head"><div class="k">stack --list</div><h2>Skills &amp; toolchain</h2></div>
+  <div class="skillgrid">
+    <div class="sk"><h4>Languages</h4><div class="chips"><span class="chip">Python</span><span class="chip">C</span><span class="chip">C++</span><span class="chip">Java</span><span class="chip">Swift</span><span class="chip">Octave</span><span class="chip">Assembly</span></div></div>
+    <div class="sk"><h4>ML Libraries</h4><div class="chips"><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">OpenCV</span><span class="chip">OpenGL</span><span class="chip">Pandas</span></div></div>
+    <div class="sk"><h4>Databases</h4><div class="chips"><span class="chip">MySQL</span><span class="chip">Oracle</span><span class="chip">SQLite</span><span class="chip">Firebase</span><span class="chip">CouchDB</span><span class="chip">MongoDB</span></div></div>
+    <div class="sk"><h4>Tools &amp; Systems</h4><div class="chips"><span class="chip">IntelliJ IDEA</span><span class="chip">LaTeX</span><span class="chip">Android Studio</span><span class="chip">Xcode</span><span class="chip">Proteus</span></div></div>
+  </div>
+  <div class="sec-head" style="margin-top:48px"><div class="k">achievements --honors</div><h2 style="font-size:1.6rem">Achievements &amp; competitions</h2></div>
+  <div class="awards">
+    <div class="aw"><span class="ico">🎓</span><div><b>FuseMachines AI Microdegree — Full Scholarship</b><span>1 of 12 selected from ~500 · sponsored by H&amp;M Group · 2022–23</span></div></div>
+    <div class="aw"><span class="ico">🏆</span><div><b>Harvard Health Systems Innovation Hackathon</b><span>Finalist — Team AI CureHub · 2025</span></div></div>
+    <div class="aw"><span class="ico">🥇</span><div><b>Top-10 — Poridhi × BrainStation AI Hackathon</b><span>Team Hypertune · 2025</span></div></div>
+    <div class="aw"><span class="ico">🧮</span><div><b>Divisional Olympiad Champion</b><span>Math, Physics &amp; Chemistry · 2009–2014</span></div></div>
+    <div class="aw"><span class="ico">💻</span><div><b>ACM ICPC Regional Preliminary</b><span>Team BUET_CantGetAC · 4 problems solved · 2018</span></div></div>
+    <div class="aw"><span class="ico">🗣️</span><div><b>IELTS Overall 7.5</b><span>Listening 8.5 · Reading 8 · Speaking 7</span></div></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap reveal">
+  <div class="contact">
+    <h2>Let's build something <span>intelligent</span></h2>
+    <p>Open to roles and collaborations in NLP, LLMs, and machine learning engineering.</p>
+    <div class="cta">
+      <a class="btn btn-p" href="mailto:abhishek.agarwal0395@gmail.com">✉ abhishek.agarwal0395@gmail.com</a>
+      <a class="btn btn-g" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-g" href="https://codeforces.com/profile/strglntoexist" target="_blank" rel="noopener">Codeforces</a>
+    </div>
+  </div>
+</div></section>
+
+<footer>// Reference: Dr. Rifat Shahriyar, Professor, CSE, BUET · rifat@cse.buet.ac.bd &nbsp;·&nbsp; © <span id="yr"></span> Abhishek Agarwala</footer>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // theme toggle
+  (function(){
+    const root=document.documentElement,btn=document.getElementById('themeToggle'),
+          ico=document.getElementById('themeIco'),lbl=document.getElementById('themeLbl');
+    function render(){
+      const light=root.getAttribute('data-theme')==='light';
+      ico.textContent=light?'☾':'☀';lbl.textContent=light?'dark':'light';
+    }
+    render();
+    btn.addEventListener('click',()=>{
+      const light=root.getAttribute('data-theme')==='light';
+      if(light){root.removeAttribute('data-theme');localStorage.setItem('ab-theme','dark');}
+      else{root.setAttribute('data-theme','light');localStorage.setItem('ab-theme','light');}
+      render();
+    });
+  })();
+</script>
+</body>
+</html>
